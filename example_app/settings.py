@@ -13,7 +13,7 @@ SECRET_KEY = 'fsch+6!=q+@ol&%0x!nwdl@48^ixbd4clx5f1i!5n^66y+pmn*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quiet-anchorage-41783.herokuapp.com']
 
 
 # Application definition
@@ -34,11 +34,14 @@ INSTALLED_APPS = (
 
 CHATTERBOT = {
     'name': 'Django ChatterBot Example',
+    'logic_adapters': [
+        "chatterbot.logic.MathematicalEvaluation",
+        "chatterbot.logic.BestMatch"
+    ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
-        'chatterbot.corpus.english.greetings'
-    ],
-    'django_app_name': 'django_chatterbot'
+        'chatterbot.corpus'
+    ]
 }
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 ROOT_URLCONF = 'example_app.urls'
@@ -99,7 +103,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
@@ -109,6 +113,5 @@ STATICFILES_DIRS = (
     ),
 )
 
-STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-ALLOWED_HOSTS = ['quiet-anchorage-41783.herokuapp.com']
