@@ -110,3 +110,5 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+
+ALLOWED_HOSTS = ['quiet-anchorage-41783.herokuapp.com']
