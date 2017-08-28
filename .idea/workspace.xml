@@ -53,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example_app/templates/app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,7 +97,6 @@
         <option value="$PROJECT_DIR$/example_app/static/js/js.cookie.js" />
         <option value="$PROJECT_DIR$/example_app/static/js/jquery.js" />
         <option value="$PROJECT_DIR$/example_app/static/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/example_app/templates/app.html" />
         <option value="$PROJECT_DIR$/example_app/templates/nav.html" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/example_app/urls.py" />
@@ -97,6 +106,7 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/example_app/settings.py" />
+        <option value="$PROJECT_DIR$/example_app/templates/app.html" />
       </list>
     </option>
   </component>
@@ -137,6 +147,12 @@
               <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="circus" type="462c0819:PsiDirectoryNode" />
               <item name="example_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="circus" type="462c0819:PsiDirectoryNode" />
+              <item name="example_app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
@@ -449,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503895178648</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="settings.py changes">
+      <created>1503895204778</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1503895204778</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -735,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example_app/templates/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="22" lean-forward="true" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example_app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -821,6 +837,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example_app/templates/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
