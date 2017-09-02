@@ -1,0 +1,233 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="{% static 'img/bot.png' %}" type="image/gif" sizes="16x16">
+<title>iChat</title>
+<style type="text/css">
+.mainContainer{
+	height:100%;
+	width:100%;
+	float:left;
+	position:fixed;
+	background-color: #e5e5e5;
+}
+#chatBox{
+	height:550px;
+	width:400px;
+	float:right;
+	bottom:0;
+	margin-left:70%;
+	position: absolute;
+}
+#header{
+	background-color:#e55b59;
+	position:absolute;
+	float:right;
+	height:44px;
+	width:400px;
+	color:#fff;
+	font-family:Calibri, Arial;
+	font-size:19px;
+	padding-top:3%;
+}
+#botName{
+	margin-left:5%;
+	
+}
+#body{
+	position:absolute;
+	width:400px;
+	min-height:491px;
+	background-color:#fff;
+	font-family:Calibri, Arial;
+	font-size:11px;
+	margin-top:11%;
+}
+#chatArea{
+	width:400px;
+	height:425px;
+	overflow-y:auto;
+}
+#footer{
+	background-color:#0a7ec2;
+	position:absolute;
+	margin-top:132%;
+	height:15px;
+	width:400px;
+	color:#fff;
+	font-family:Calibri, Arial;
+	font-size: 10px;
+	padding-left:5%;
+}
+#minimizeButton{
+	float: right;
+	margin-right:2%;
+	margin-top:-7%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	margin-left:89%;
+}
+#chatInput{
+	font-family: Calibri, Arial;
+	color:#2d2d2d;
+	font-size:14px;
+	width:80%;
+	border: 1px solid;
+	padding: 10px;
+	border-color: #e5e5e5;
+	border-radius: 1em;
+	margin-left:2.5%;
+	position: absolute;
+	bottom: 3%;
+}
+#sendButton{
+	position:absolute;
+	bottom: 3.4%;
+	float: right;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	margin-left:89%;
+}
+.botMessage{
+	width: 200px;
+	background-color: #d4cbca;
+	color: #2d2d2d;
+	font-family: Calibri, Arial;
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px;
+	box-shadow:3px 3px #b0a8a4;
+	border-radius: 0.5em;
+	margin: 7% 0 1% 7%;
+}
+.humanMessage{
+	float: right;
+	width: 200px;
+	background-color: #e55b59;
+	color: #fff;
+	font-family: Calibri, Arial;
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px;
+	box-shadow:3px 3px #b0a8a4;
+	border-radius: 0.5em;
+	margin: 7% 6% 1% 0;
+}
+#activateiChat{
+	position: fixed;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	margin-left:91%;
+}
+</style>
+<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/js.cookie.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript">
+
+ var $input = $('.chatInput');
+ var chatterbotUrl = '{% url "chatterbot:chatterbot" %}';
+      var csrftoken = Cookies.get('csrftoken');
+
+      function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+        }
+      });
+<!-- writing a function to create input row when user submit its input-->
+function createRowHuman(text) {
+        var span = "<span class=\"humanMessage\" >"+ text +"</span>";
+			$("#chatArea").append(span);
+			$("#chatInput").val("");
+      }
+function createRowBot(text) {
+       var span = "<span class=\"botMessage\" >"+ text +"</span>";
+		$("#chatArea").append(span);
+		$("#chatInput").val("");
+     }
+
+
+function submitInput() {
+        var inputData ={
+        'text': $(".chatInput").val()
+        };
+        // Display the user's input on the web page
+        createRowHuman(inputData.text);
+
+       var $submit = $.ajax({
+         type: 'POST',
+         url: chatterbotUrl,
+         data: JSON.stringify(inputData),
+         contentType: 'application/json'
+       });
+
+           $submit.done(function(statement) {
+            createRowBot(statement.text);
+       });
+
+        $submit.fail(function() {
+          // TODO: Handle errors
+        });
+      }
+
+
+$(document).ready(function() {
+	$("#chatBox").hide();
+	$("#activateiChat").click(function(){
+        $("#activateiChat").hide();
+		$("#chatBox").show();
+    });
+	$("#minimizeButton").click(function(){
+        $("#chatBox").hide();
+		$("#activateiChat").show();
+    });
+});
+
+function hideChatBox(){
+	$("#chatBox").hide();
+	$("#activateiChat").show();
+}
+
+function sayThanks(){
+	var reply = "<span class=\"botMessage\" >"+"Thank you!"+"</span>";
+	$("#chatArea").append(reply);
+}
+function saySorry(){
+	var reply = "<span class=\"botMessage\" >"+"Okay, I shall try to serve you better next time. Sorry for the inconvenience!"+"</span>";
+	$("#chatArea").append(reply);
+}
+</script>
+</head>
+<body>
+
+<div class="mainContainer">
+<button id="activateiChat" > <img src="{% static 'img/bot.png' %}" /> </button>
+<div id="chatBox">
+<div id="header"><span id="botName">iChat  <img src="{% static 'img/greenDot.png' %}"alt="available" /></span><button id="minimizeButton" ><img id="minimize" src="{% static 'img/minimize.png' %}" alt="minimize"/></button></div>
+<div id="body">
+
+<div id="chatArea"> 
+<span class="botMessage" >Hi! My name is iChat and I am a Chatbot. I can help you with your work related queries. Please type in your question in the space provided.</span>
+</div>
+
+
+<input type="text" id="chatInput" class="chatInput" placeholder="Ask me anything..." onkeypress="if (event.keyCode == 13)
+                        document.getElementById('sendButton').click()" /><button id="sendButton" onclick="submitInput();"> <img src="{% static 'img/sendAgain.png' %}" /> </button>
+</div>
+<div id="footer">Was this helpful? &nbsp;&nbsp;<a href="#" style="text-decoration:none;color:#fff;" onclick="sayThanks();">Yes</a> | <a href="#" style="text-decoration:none;color:#fff;" onclick="saySorry();">No</a></div>
+</div>
+</div>
+</body>
+</html>
