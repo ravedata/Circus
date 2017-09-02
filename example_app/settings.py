@@ -40,7 +40,7 @@ CHATTERBOT = {
     ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
-        'chatterbot.corpus'
+        '.\example_app\CustomCorpus'
     ]
 }
 
