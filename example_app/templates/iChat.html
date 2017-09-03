@@ -151,11 +151,16 @@ function createRowHuman(text) {
         var span = "<span class=\"humanMessage\" >"+ text +"</span>";
 			$("#chatArea").append(span);
 			$("#chatInput").val("");
+			//set a variable as isResponseRecieved= 0 and set the message that user chatbot is typing
+			$('#chatInput').attr("placeholder","iChat is Typing...");
       }
 function createRowBot(text) {
+//set a variable as isResponseRecieved= 0 and empty the message that user chatbot is typing
        var span = "<span class=\"botMessage\" >"+ text +"</span>";
 		$("#chatArea").append(span);
 		$("#chatInput").val("");
+		$('#chatInput').attr("placeholder","Ask me anything...");
+
      }
 
 
@@ -164,7 +169,10 @@ function submitInput() {
         'text': $(".chatInput").val()
         };
         // Display the user's input on the web page
+        if(inputData.text!="")
+        {
         createRowHuman(inputData.text);
+
 
        var $submit = $.ajax({
          type: 'POST',
@@ -173,9 +181,11 @@ function submitInput() {
          contentType: 'application/json'
        });
 
+
            $submit.done(function(statement) {
             createRowBot(statement.text);
        });
+       }
 
         $submit.fail(function() {
           // TODO: Handle errors
@@ -208,6 +218,8 @@ function saySorry(){
 	var reply = "<span class=\"botMessage\" >"+"Okay, I shall try to serve you better next time. Sorry for the inconvenience!"+"</span>";
 	$("#chatArea").append(reply);
 }
+
+
 </script>
 </head>
 <body>
