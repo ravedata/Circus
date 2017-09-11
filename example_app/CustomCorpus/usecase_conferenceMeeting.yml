@@ -1,0 +1,45 @@
+-
+  - 'Serial #'
+  - Keyword
+  - 'iChat Question 1'
+  - 'User Response 1'
+  - 'iChat Question on Response 1'
+  - 'User Response 2'
+  - 'iChat Response when match'
+  - 'iChat Response when no match'
+-
+  - '1'
+  - 'Conference ,room,conference+room,meeting+room, book room'
+  - 'Do you want to book  conference room?      Or  Do you want to book meeting room'
+  - Yes
+  - 'Here you go<URL for Conference room booking>'
+  - ""
+  - ""
+  - ""
+-
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+-
+  - ""
+  - ""
+  - ""
+  - No
+  - 'Please ask me something else then'
+  - 'Could you please tell my scheduled meeting time.'
+  - 'Go to this <URL …….>'
+  - ""
+-
+  - ""
+  - ""
+  - ""
+  - '<Bogus Input>'
+  - 'Sorry I did not understand that. Please try again.'
+  - 'can u book meeting room?'
+  - 'Here you go<URL for Conference room booking>'
+  - ""
