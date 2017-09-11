@@ -1,0 +1,19 @@
+categories:
+- HRP
+conversations:
+- - Who is the HRP SPOC of MICS
+  - Arpita Srivastava is HRP SPOC of MICS.
+- - Who is the HRP SPOC of GSIT
+  - XYZ is HRP SPOC of GSIT.
+- - How to Create HRP for an associate?
+  - If the onboarding of the associate is already done then please go to <URL of HRP Creation>.
+- - How to do HRP Modification
+  - If you really want to modify the HRP of an associate then please go to <URL of HRP Modificatio>.
+- - How to do HRP Deletion
+  - If you really want to Delete the HRP of an associate then please go to https://www.google.co.in.
+- - Who creates HRP Request ?
+  - Project lead of the associate.
+- - What is the full form of HRP ?
+  - Full form of HRP is Human Resouce Planning.
+- - What is HRP Creation?
+  - HRP Creation is a process to officially onboard the associate on the client side.
