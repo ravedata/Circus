@@ -36,13 +36,15 @@ CHATTERBOT = {
     'name': 'Django ChatterBot Example',
     'logic_adapters':  [
         #'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch',
-        'chatterbot.logic.LowConfidenceAdapter'
+        'chatterbot_weather.WeatherLogicAdapter',
+       # 'chatterbot.logic.BestMatch',
+       # 'chatterbot.logic.LowConfidenceAdapter'
     ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
-        '.\example_app\CustomCorpus'
-    ]
+        '.\example_app\CustomCorpus'],
+    'output_adapter': 'example_app.customoutputadaptor.CustomOutputAdapter',
+
 }
 
 MIDDLEWARE_CLASSES = (
