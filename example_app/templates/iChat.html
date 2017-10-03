@@ -3,133 +3,14 @@
 <html>
 <head>
 <link rel="icon" href="{% static 'img/bot.png' %}" type="image/gif" sizes="16x16">
+     <link rel="stylesheet" href="{% static 'css/Style.css' %}"/>
 <title>iChat</title>
-<style type="text/css">
-.mainContainer{
-	height:100%;
-	width:100%;
-	float:left;
-	position:fixed;
-	background-color: #e5e5e5;
-}
-#chatBox{
-	height:550px;
-	width:400px;
-	float:right;
-	bottom:0;
-	margin-left:70%;
-	position: absolute;
-}
-#header{
-	background-color:#e55b59;
-	position:absolute;
-	float:right;
-	height:44px;
-	width:400px;
-	color:#fff;
-	font-family:Calibri, Arial;
-	font-size:19px;
-	padding-top:3%;
-}
-#botName{
-	margin-left:5%;
-	
-}
-#body{
-	position:absolute;
-	width:400px;
-	min-height:491px;
-	background-color:#fff;
-	font-family:Calibri, Arial;
-	font-size:11px;
-	margin-top:11%;
-}
-#chatArea{
-	width:400px;
-	height:425px;
-	overflow-y:auto;
-}
-#footer{
-	background-color:#0a7ec2;
-	position:absolute;
-	margin-top:132%;
-	height:15px;
-	width:400px;
-	color:#fff;
-	font-family:Calibri, Arial;
-	font-size: 10px;
-	padding-left:5%;
-}
-#minimizeButton{
-	float: right;
-	margin-right:2%;
-	margin-top:-7%;
-	background-repeat: no-repeat;
-	background-color: transparent;
-	border: none;
-	margin-left:89%;
-}
-#chatInput{
-	font-family: Calibri, Arial;
-	color:#2d2d2d;
-	font-size:14px;
-	width:80%;
-	border: 1px solid;
-	padding: 10px;
-	border-color: #e5e5e5;
-	border-radius: 1em;
-	margin-left:2.5%;
-	position: absolute;
-	bottom: 3%;
-}
-#sendButton{
-	position:absolute;
-	bottom: 3.4%;
-	float: right;
-	background-repeat: no-repeat;
-	background-color: transparent;
-	border: none;
-	margin-left:89%;
-}
-.botMessage{
-	width: 200px;
-	background-color: #d4cbca;
-	color: #2d2d2d;
-	font-family: Calibri, Arial;
-	font-size: 14px;
-	display: inline-block;
-	padding: 10px;
-	box-shadow:3px 3px #b0a8a4;
-	border-radius: 0.5em;
-	margin: 7% 0 1% 7%;
-}
-.humanMessage{
-	float: right;
-	width: 200px;
-	background-color: #e55b59;
-	color: #fff;
-	font-family: Calibri, Arial;
-	font-size: 14px;
-	display: inline-block;
-	padding: 10px;
-	box-shadow:3px 3px #b0a8a4;
-	border-radius: 0.5em;
-	margin: 7% 6% 1% 0;
-}
-#activateiChat{
-	position: fixed;
-	bottom: 0;
-	background-repeat: no-repeat;
-	background-color: transparent;
-	border: none;
-	margin-left:91%;
-}
-</style>
 <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/js.cookie.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
-<script type="text/javascript">
 
+<script type="text/javascript">
+var currentTime = time();
  var $input = $('.chatInput');
  var chatterbotUrl = '{% url "chatterbot:chatterbot" %}';
       var csrftoken = Cookies.get('csrftoken');
@@ -148,17 +29,19 @@
       });
 <!-- writing a function to create input row when user submit its input-->
 function createRowHuman(text) {
-        var span = "<span class=\"humanMessage\" >"+ text +"</span>";
+        var span = "<span class=\"humanMessage\" >"+ text +"<p class=\"showTime\">"+currentTime+"</span>";
 			$("#chatArea").append(span);
 			$("#chatInput").val("");
+			$("#chatArea").animate({ scrollTop: $("#chatArea").prop('scrollHeight')}, 1000);
 			//set a variable as isResponseRecieved= 0 and set the message that user chatbot is typing
 			$('#chatInput').attr("placeholder","iChat is Typing...");
       }
 function createRowBot(text) {
 //set a variable as isResponseRecieved= 0 and empty the message that user chatbot is typing
-       var span = "<span class=\"botMessage\" >"+ text +"</span>";
+       var span = "<span class=\"botMessage\" >"+ text +"<p class=\"showTime\">"+currentTime+"</span>";
 		$("#chatArea").append(span);
 		$("#chatInput").val("");
+		$("#chatArea").animate({ scrollTop: $("#chatArea").prop('scrollHeight')}, 1000);
 		$('#chatInput').attr("placeholder","Ask me anything...");
 
      }
@@ -194,6 +77,14 @@ function submitInput() {
 
 
 $(document).ready(function() {
+
+$("#chatBox").hide();
+var reply = "<span class=\"botMessage\" >"+"Hi! My name is iChat and I am a Chatbot. I can help you with your work related queries. Please select a quick link below or type in your question in the space provided.<p class=\"showTime\">"+currentTime+"</p></span></br></br></br>";
+var qLinks = "<a class=\"quickLinks\" id=\"weather\" href=\"#\" >Weather</a><a class=\"quickLinks\" id=\"time\" href=\"#\">Local Time</a><a class=\"quickLinks\" id=\"ci\" href=\"#\">Contact Information</a>";
+
+	$("#chatArea").append(reply);
+
+	$("#chatArea").append(qLinks);
 	$("#chatBox").hide();
 	$("#activateiChat").click(function(){
         $("#activateiChat").hide();
@@ -203,6 +94,23 @@ $(document).ready(function() {
         $("#chatBox").hide();
 		$("#activateiChat").show();
     });
+
+	$("#weather").on("click", function(){
+		var reply = "<span class=\"botMessage\" >"+"Okay, please tell me the place of which you want to know the weather."+"<p class=\"showTime\">"+currentTime+"</span>";
+		$("#chatArea").append(reply);
+		$("#chatArea").animate({ scrollTop: $("#chatArea").prop('scrollHeight')}, 1000);
+	});
+	$("#time").on("click", function(){
+		var reply = "<span class=\"botMessage\" >"+"Okay, please tell me the place of whose current time you want to know."+"<p class=\"showTime\">"+currentTime+"</span>";
+		$("#chatArea").append(reply);
+		$("#chatArea").animate({ scrollTop: $("#chatArea").prop('scrollHeight')}, 1000);
+	});
+	$("#ci").on("click", function(){
+		var reply = "<span class=\"botMessage\" >"+"Okay, please tell me the name of the person whose contact information you want."+"<p class=\"showTime\">"+currentTime+"</span>";
+		$("#chatArea").append(reply);
+		$("#chatArea").animate({ scrollTop: $("#chatArea").prop('scrollHeight')}, 1000);
+	});
+
 });
 
 function hideChatBox(){
@@ -219,7 +127,17 @@ function saySorry(){
 	$("#chatArea").append(reply);
 }
 
-
+function time(){
+	var date = new Date();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var ampm = hours >= 12 ? 'PM' : 'AM';
+	hours = hours % 12;
+	hours = hours ? hours : 12; // the hour '0' should be '12'
+	minutes = minutes < 10 ? '0'+minutes : minutes;
+	var strTime = hours + ':' + minutes + ' ' + ampm;
+	return strTime;
+}
 </script>
 </head>
 <body>
@@ -231,7 +149,7 @@ function saySorry(){
 <div id="body">
 
 <div id="chatArea"> 
-<span class="botMessage" >Hi! My name is iChat and I am a Chatbot. I can help you with your work related queries. Please type in your question in the space provided.</span>
+
 </div>
 
 

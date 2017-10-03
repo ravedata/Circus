@@ -36,9 +36,9 @@ CHATTERBOT = {
     'name': 'Django ChatterBot Example',
     'logic_adapters':  [
         #'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot_weather.WeatherLogicAdapter',
-       # 'chatterbot.logic.BestMatch',
-       # 'chatterbot.logic.LowConfidenceAdapter'
+       # 'chatterbot_weather.WeatherLogicAdapter',
+       'chatterbot.logic.BestMatch',
+       'chatterbot.logic.LowConfidenceAdapter'
     ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
