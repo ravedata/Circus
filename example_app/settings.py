@@ -35,7 +35,7 @@ INSTALLED_APPS = (
 CHATTERBOT = {
     'name': 'Django ChatterBot Example',
     'logic_adapters':  [
-        'chatterbot.logic.TimeLogicAdapter',
+        #'chatterbot.logic.TimeLogicAdapter',
        # 'chatterbot_weather.WeatherLogicAdapter',
        'chatterbot.logic.BestMatch',
        'chatterbot.logic.LowConfidenceAdapter'
