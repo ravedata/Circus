@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c51bf4e6-0b17-4b19-ae48-8227ce2d42b0" name="Default" comment="Integrating codes">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/circus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/circus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="c51bf4e6-0b17-4b19-ae48-8227ce2d42b0" name="Default" comment="Changing after an year and changed interpretar to python 3.6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example_app/customoutputadaptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_app/customoutputadaptor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_app/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example_app/customoutputadaptor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+            <state relative-caret-position="3791">
+              <caret line="223" column="28" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="28" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -44,36 +37,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="-727">
               <caret line="52" column="36" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
         </entry>
@@ -87,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example_app/templates/iChat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
@@ -193,18 +167,6 @@
               <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="CbotNew" type="462c0819:PsiDirectoryNode" />
               <item name="example_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CbotNew" type="462c0819:PsiDirectoryNode" />
-              <item name="example_app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_chatterbot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CbotNew" type="462c0819:PsiDirectoryNode" />
-              <item name="example_app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -622,7 +584,21 @@
       <option name="project" value="LOCAL" />
       <updated>1507006089018</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Changing after an year and changed interpretar to python 3.6">
+      <created>1544064664889</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1544064664889</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Changing after an year and changed interpretar to python 3.6">
+      <created>1544068673203</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1544068673203</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -638,12 +614,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22693452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22693452" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5057283" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6473214" visible="true" weight="0.26350245" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6473214" visible="true" weight="0.26350245" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49411765" weight="0.5482815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -708,7 +684,8 @@
     <MESSAGE value="Yml File changes" />
     <MESSAGE value="weather API POC" />
     <MESSAGE value="Integrating codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrating codes" />
+    <MESSAGE value="Changing after an year and changed interpretar to python 3.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing after an year and changed interpretar to python 3.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -879,28 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example_app/templates/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -918,10 +873,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example_app/templates/iChat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-727">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example_app/customoutputadaptor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+        <state relative-caret-position="3791">
+          <caret line="223" column="28" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="28" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
@@ -930,15 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example_app/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example_app/templates/iChat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+        <state relative-caret-position="306">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
