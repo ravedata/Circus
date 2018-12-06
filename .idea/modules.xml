@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/circus.iml" filepath="$PROJECT_DIR$/.idea/circus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Chatbot/.idea/django_chatterbot.iml" filepath="$PROJECT_DIR$/../Chatbot/.idea/django_chatterbot.iml" />
     </modules>
   </component>
 </project>

@@ -35,7 +35,7 @@ INSTALLED_APPS = (
 CHATTERBOT = {
     'name': 'Django ChatterBot Example',
     'logic_adapters':  [
-        #'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.TimeLogicAdapter',
        # 'chatterbot_weather.WeatherLogicAdapter',
        'chatterbot.logic.BestMatch',
        'chatterbot.logic.LowConfidenceAdapter'
@@ -54,8 +54,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware'
+    ##'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 ROOT_URLCONF = 'example_app.urls'
@@ -116,5 +116,5 @@ STATICFILES_DIRS = (
     ),
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

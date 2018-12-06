@@ -83,7 +83,7 @@ now = datetime.datetime.today()
 from chatterbot.output.output_adapter import OutputAdapter
 import requests
 
-from chatterbot.conversation import statement
+from chatterbot.conversation import Statement
 ## Call the weather package  here
 
 
